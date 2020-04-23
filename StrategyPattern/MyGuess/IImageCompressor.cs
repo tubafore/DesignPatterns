@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyGuess
 {
-    public interface IImageCompression
+    public interface IImageCompressor
     {
         void Compress(Image image);
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyGuess
 {
-    public class JpegCompression : IImageCompression
+    public class JpegCompressor : IImageCompressor
     {
         public void Compress(Image image)
         {
