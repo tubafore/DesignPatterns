@@ -9,6 +9,9 @@ namespace CommandPattern
             RunMyGuess();
             RunGuessBasedOnLecture();
             RunTheirSolution();
+            RunCompositeCommands();
+            RunUndoCommand();
+            RunTheirUndoCommand();
 
             Console.WriteLine("Press any key to quit...");
             Console.ReadKey();
@@ -38,6 +41,47 @@ namespace CommandPattern
             TheirSolution.AddCustomerCommand command = new TheirSolution.AddCustomerCommand(service);
             TheirSolution.Button button = new TheirSolution.Button(command);
             button.Click();
+        }
+
+        private static void RunCompositeCommands()
+        {
+            TheirSolution.CustomerService service = new TheirSolution.CustomerService();
+            TheirSolution.CompositeCommands.CompositeCommand cCommand = new TheirSolution.CompositeCommands.CompositeCommand();
+            cCommand.Add(new TheirSolution.CompositeCommands.ResizeCommand());
+            cCommand.Add(new TheirSolution.CompositeCommands.CropCommand());
+            TheirSolution.Button button = new TheirSolution.Button(cCommand);
+            button.Click();
+        }
+
+        private static void RunUndoCommand()
+        {
+            GuessBasedOnLecture.UndoableCommands.Document document = new GuessBasedOnLecture.UndoableCommands.Document();
+            GuessBasedOnLecture.UndoableCommands.History history = new GuessBasedOnLecture.UndoableCommands.History();
+            GuessBasedOnLecture.UndoableCommands.BoldCommand bold = new GuessBasedOnLecture.UndoableCommands.BoldCommand(document);
+            GuessBasedOnLecture.Button button = new GuessBasedOnLecture.Button(bold);
+            GuessBasedOnLecture.UndoableCommands.UndoCommand undo = new GuessBasedOnLecture.UndoableCommands.UndoCommand(history);
+            GuessBasedOnLecture.Button undoButton = new GuessBasedOnLecture.Button(undo);
+
+            document.Content = "Something pretty to look at while testing.";
+            document.PrintToConsole();
+            button.Click();
+            history.Push(bold);
+            document.PrintToConsole();
+            undoButton.Click();
+            document.PrintToConsole();
+        }
+
+        private static void RunTheirUndoCommand()
+        {
+            TheirSolution.UndoableCommands.History history = new TheirSolution.UndoableCommands.History();
+            TheirSolution.UndoableCommands.HtmlDocument document = new TheirSolution.UndoableCommands.HtmlDocument { Content = "Hello World!" };
+
+            TheirSolution.UndoableCommands.BoldCommand boldCommand = new TheirSolution.UndoableCommands.BoldCommand(document, history);
+            TheirSolution.UndoableCommands.UndoCommand undoCommand = new TheirSolution.UndoableCommands.UndoCommand(history);
+            boldCommand.Execute();
+            Console.WriteLine(document.Content);
+            undoCommand.Execute();
+            Console.WriteLine(document.Content);
         }
     }
 }
