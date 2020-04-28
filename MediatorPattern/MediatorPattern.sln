@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorPattern", "MediatorPattern\MediatorPattern.csproj", "{CEA65B4F-C79B-40C0-90C0-85DC670EA88E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGuess", "MyGuess\MyGuess.csproj", "{3FBB65AF-3D87-4959-9ED1-6CAD1736D821}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA65B4F-C79B-40C0-90C0-85DC670EA88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA65B4F-C79B-40C0-90C0-85DC670EA88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA65B4F-C79B-40C0-90C0-85DC670EA88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA65B4F-C79B-40C0-90C0-85DC670EA88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBB65AF-3D87-4959-9ED1-6CAD1736D821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBB65AF-3D87-4959-9ED1-6CAD1736D821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBB65AF-3D87-4959-9ED1-6CAD1736D821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBB65AF-3D87-4959-9ED1-6CAD1736D821}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DB703C5-CF0E-441F-B7E8-DE93C7C464A4}
+	EndGlobalSection
+EndGlobal
