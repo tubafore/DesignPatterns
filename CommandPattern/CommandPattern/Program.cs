@@ -12,6 +12,7 @@ namespace CommandPattern
             RunCompositeCommands();
             RunUndoCommand();
             RunTheirUndoCommand();
+            RunExercise();
 
             Console.WriteLine("Press any key to quit...");
             Console.ReadKey();
@@ -82,6 +83,23 @@ namespace CommandPattern
             Console.WriteLine(document.Content);
             undoCommand.Execute();
             Console.WriteLine(document.Content);
+        }
+
+        private static void RunExercise()
+        {
+            Exercise.VideoEditor videoEditor = new Exercise.VideoEditor();
+            Exercise.History history = new Exercise.History();
+
+            history.Push(videoEditor.CreateState());
+            videoEditor.Contrast = 0.6f;
+            Console.WriteLine(videoEditor);
+
+            history.Push(videoEditor.CreateState());
+            videoEditor.Text = "Super Label!";
+            Console.WriteLine(videoEditor);
+
+            videoEditor.LoadState(history.Pop());
+            Console.WriteLine(videoEditor);
         }
     }
 }
