@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Exercise\Exercise.csproj" />
+    <ProjectReference Include="..\GuessBasedOnLecture\GuessBasedOnLecture.csproj" />
     <ProjectReference Include="..\MyGuess\MyGuess.csproj" />
+    <ProjectReference Include="..\TheirSolution\TheirSolution.csproj" />
   </ItemGroup>
 
 </Project>
