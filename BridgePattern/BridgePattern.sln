@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "BridgePattern\BridgePattern.csproj", "{3259D7E2-30BB-4958-BC34-01B594105F7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGuess", "MyGuess\MyGuess.csproj", "{B65BE3D8-30EB-4A76-88C7-9B851BC59FA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3259D7E2-30BB-4958-BC34-01B594105F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3259D7E2-30BB-4958-BC34-01B594105F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3259D7E2-30BB-4958-BC34-01B594105F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3259D7E2-30BB-4958-BC34-01B594105F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65BE3D8-30EB-4A76-88C7-9B851BC59FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65BE3D8-30EB-4A76-88C7-9B851BC59FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65BE3D8-30EB-4A76-88C7-9B851BC59FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65BE3D8-30EB-4A76-88C7-9B851BC59FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90692995-D2B8-4AFC-B45F-A73B076420B1}
+	EndGlobalSection
+EndGlobal
